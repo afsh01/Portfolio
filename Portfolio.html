@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afshur Thoufeeq Musharraf | Electrical Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 25%;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary);
+        }
+        
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+        
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-org {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .project-content p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content .date {
+            color: var(--gray);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .education-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .education-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-card .date {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Publications Section */
+        .publication-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .publication-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            width: 30px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Publication Links Styling */
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Publication Details Styling */
+        .publication-details {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        
+        .detail-item {
+            margin-bottom: 0.8rem;
+            display: flex;
+        }
+        
+        .detail-item strong {
+            min-width: 120px;
+            color: var(--primary);
+        }
+        
+        /* Ensure text justification */
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Afshur <span>Mohideen</span></div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Afshur Thoufeeq Musharraf Kaja Mohideen</h1>
+            <p>Electrical Engineering Graduate | Hardware Design & Testing | Analog/Digital Circuit Design | Power Electronics & Controls</p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="text-justify">Master's graduate in Electrical Engineering, actively seeking full time opportunities in Hardware Design & Testing, Analog/Digital Circuit Design, Power Electronics and Controls.</p>
+                    <p class="text-justify">Driven by innovation, I am eager to contribute my technical expertise and problem-solving skills to a dynamic engineering team.</p>
+                    <p class="text-justify">My experience spans across control engineering, process automation, hardware design, PCBA testing, and teaching, providing me with a comprehensive understanding of electrical engineering principles and applications.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHiMCPcE9bCVA/profile-displayphoto-scale_400_400/B56Zo8ujKjJQAk-/0/1761955427671?e=1765411200&v=beta&t=t6ObCyc5KRgkwiOlI6HB0vNo9fikRTHyASzMPx23Vc0" alt="Afshur Thoufeeq Musharraf" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-code"></i> Python</li>
+                        <li><i class="fas fa-code"></i> C, C++</li>
+                        <li><i class="fas fa-code"></i> VHDL, Verilog</li>
+                        <li><i class="fas fa-code"></i> Assembly Language</li>
+                        <li><i class="fas fa-code"></i> Embedded C</li>
+                        <li><i class="fas fa-code"></i> Robot Framework</li>
+                        <li><i class="fas fa-code"></i> GIT Bash</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Testing</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-tools"></i> Oscilloscopes, DMM, Function Generators</li>
+                        <li><i class="fas fa-tools"></i> Functional, ATE & Bench-Level Testing</li>
+                        <li><i class="fas fa-tools"></i> PCB Debugging & Soldering</li>
+                        <li><i class="fas fa-tools"></i> PCBA Testing & Repair</li>
+                        <li><i class="fas fa-tools"></i> In-circuit Test, IC Programming Test</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-desktop"></i> Cadence (Virtuoso, Spectre)</li>
+                        <li><i class="fas fa-desktop"></i> MATLAB/Simulink, LabVIEW</li>
+                        <li><i class="fas fa-desktop"></i> LTSPICE, Altium, AutoCAD</li>
+                        <li><i class="fas fa-desktop"></i> Keil IDE</li>
+                        <li><i class="fas fa-desktop"></i> Synopsys (IC Validator, HSPICE, VCS)</li>
+                        <li><i class="fas fa-desktop"></i> Calibre, ModelSim</li>
+                        <li><i class="fas fa-desktop"></i> MS Office Suite</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Operating Systems</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-windows"></i> Windows</li>
+                        <li><i class="fab fa-linux"></i> Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Control Systems</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-cogs"></i> Typhoon HIL</li>
+                        <li><i class="fas fa-cogs"></i> ABB800xA DCS</li>
+                        <li><i class="fas fa-cogs"></i> MOD5 DCS</li>
+                        <li><i class="fas fa-cogs"></i> Process Automation</li>
+                        <li><i class="fas fa-cogs"></i> HMI, Data Analysis</li>
+                        <li><i class="fas fa-cogs"></i> Simulation, User Interface Programming</li>
+                        <li><i class="fas fa-cogs"></i> Control Builder Programming</li>
+                        <li><i class="fas fa-cogs"></i> Structured Text Programming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-brain fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Power Prediction for RTL Designs Using a Two-Layer Neural Network</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Developed a two-layer ANN model to predict dynamic, static, and total power consumption in RTL designs. Implemented forward and backpropagation with L2 regularization and He initialization, improving model accuracy. Trained on normalized synthetic RTL power data, achieving high MSE and R² scores. Optimized hardware design by predicting power consumption based on gates, clock frequency, and cell area.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Artificial Neural Networks</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-bolt fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design of High-Performance LLC Resonant Converter</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed and simulated an LLC resonant converter (380-420 V input and 200-1000 W output) achieving >94% efficiency. Achieved power density greater than 300 W/in³ while maintaining output voltage ripple below 1%. Optimized Zero Voltage Switching (ZVS) to reduce switching losses and conducted simulations using First Harmonic Approximation (FHA) for optimal component selection and performance validation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Analog Circuit Design</span>
+                            <span class="tech-tag">LTSpice</span>
+                            <span class="tech-tag">Power Electronics</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-microchip fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ASIC Acceleration for Graph Convolution Neural Network</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed and implemented a hardware-accelerated GCN module in SystemVerilog and verified its functionality in ModelSim. Synthesized RTL using Synopsys DC, ensuring functional correctness and timing closure. Performed floor planning, power planning, CTS, and APR in Cadence Innovus, optimizing PPA. Verified DRC & LVS compliance in Calibre, ensuring manufacturability. Conducted power measurements in Cadence Innovus, analyzing dynamic and static power consumption for optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SystemVerilog</span>
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">Cadence Innovus</span>
+                            <span class="tech-tag">Calibre</span>
+                            <span class="tech-tag">Static Timing Analysis</span>
+                            <span class="tech-tag">Physical Design</span>
+                            <span class="tech-tag">DRC</span>
+                            <span class="tech-tag">LVS</span>
+                            <span class="tech-tag">Design Compiler</span>
+                            <span class="tech-tag">ModelSim</span>
+                            <span class="tech-tag">Logic Design</span>
+                            <span class="tech-tag">RTL Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-calculator fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>RTL to GDSII ASIC Design of Two-Bit Adder</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed and implemented a 2-bit adder in Verilog, verifying functionality using ModelSim. Synthesized RTL using Synopsys Design Compiler, optimizing timing and power in the gate-level netlist. Performed floorplanning, power planning, CTS, and APR in Cadence Innovus, ensuring PPA optimization. Extracted GDSII layout and verified DRC & LVS compliance in Calibre for manufacturability.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Verilog</span>
+                            <span class="tech-tag">Design Compiler</span>
+                            <span class="tech-tag">Cadence Innovus</span>
+                            <span class="tech-tag">Calibre</span>
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">Static Timing Analysis</span>
+                            <span class="tech-tag">Physical Design</span>
+                            <span class="tech-tag">DRC</span>
+                            <span class="tech-tag">LVS</span>
+                            <span class="tech-tag">ModelSim</span>
+                            <span class="tech-tag">Logic Design</span>
+                            <span class="tech-tag">RTL Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-th fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design, layout and verification of standard cell</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed and implemented NAND2xp5 standard cell using 7nm FinFET PDK, ensuring compatibility with a 7.5-track cell library. Verified functionality through HSPICE simulations, measuring propagation delay, rise/fall time using WaveViewer. Developed custom layout in Cadence Virtuoso, performing DRC & LVS checks and PEX extraction using Calibre xACT. Conducted pre-layout and post-layout simulations, validating performance with PEX-extracted netlist for accuracy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">HSPICE</span>
+                            <span class="tech-tag">Calibre xACT</span>
+                            <span class="tech-tag">Parasitic Extraction</span>
+                            <span class="tech-tag">DRC</span>
+                            <span class="tech-tag">LVS</span>
+                            <span class="tech-tag">Synopsys IC Validator</span>
+                            <span class="tech-tag">Verilog</span>
+                            <span class="tech-tag">Digital IC Design</span>
+                            <span class="tech-tag">Logic Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-wave-square fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design and Analysis of Low-Dropout (LDO) Voltage Regulator</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed an ultra-low-dropout (LDO) regulator for 2.3V output (2.5V input), achieving less than 1% line regulation over 0.1-50mA load. Optimized transient response and conducted stability analysis for robust performance across process variations. Ensured stable performance through comprehensive current pulse testing, improving output accuracy by 15% and higher efficiency.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">Cadence Spectre</span>
+                            <span class="tech-tag">Analog Circuit Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-sync-alt fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design and Analysis of a Low-Power Frequency Synthesizer PLL</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed a 1.92 GHz PLL with low power consumption while achieving less than 2ps jitter, high-frequency stability and performance. Evaluated LC VCO vs. Ring VCO topologies, showcasing LC VCO's superior jitter performance alongside the Ring VCO's extensive tuning range and rapid lock time capabilities while maintaining power dissipation less than 1.5mW.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">Cadence Spectre</span>
+                            <span class="tech-tag">Analog Circuit Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-memory fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design and custom-layout of 4-bit Full Adder</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed a 4-bit full adder using carry-ripple adders with mirror and inversion logic for optimized PPA. Verified functionality using HSPICE testbench and WaveViewer. Created custom layout for 1-bit and 4-bit adders, ensuring DRC & LVS compliance with Synopsys IC Validator VUE.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">HSPICE</span>
+                            <span class="tech-tag">Synopsys IC Validator</span>
+                            <span class="tech-tag">Digital IC Design</span>
+                            <span class="tech-tag">Calibre</span>
+                            <span class="tech-tag">DRC</span>
+                            <span class="tech-tag">LVS</span>
+                            <span class="tech-tag">Logic Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-project-diagram fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design of Two-stage Miller Compensated Op-Amp</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Designed a two-stage amplifier with differential to single-ended conversion. Designed telescopic cascode amplifier for improved gain-bandwidth tradeoff and to optimize unity gain frequency. Achieved DC gain ≥ 75 dB, phase margin ≥ 60 degrees, and unity gain frequency of 11.2 MHz. Demonstrated robust performance by driving a 500-ohm resistive load with an output swing exceeding 1.5 Vpp.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Spectre</span>
+                            <span class="tech-tag">Analog Circuit Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-tachometer-alt fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Inverter Chain Circuit Delay Optimization</h3>
+                        <div class="project-org">Arizona State University</div>
+                        <p class="text-justify">Automated delay optimization in inverter chains using a Python script to determine optimal fan-out and number of inverters. Integrated HSPICE simulations on a Linux server with auto-generated netlists for efficient circuit analysis. Enhanced design performance by minimizing delay through automated simulation and optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HSPICE</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Circuit Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-charging-station fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>PV-Grid Integrated EV Charger and Power Converter for EV Applications</h3>
+                        <div class="project-org">PSG College of Technology</div>
+                        <p class="text-justify">Developed and simulated an on-grid photovoltaic (PV) system for electric vehicle (EV) charging, with excess power routed back to the utility grid via a bidirectional AC/DC converter for efficient power management. Designed a power converter to step up 96V DC to 700V DC using a Push-Pull converter, then inverted it to 440V AC for a 3-phase induction motor using SPWM inverter technology. Implemented dynamic speed control by adjusting the SPWM modulation index, optimizing performance for varying loads. Validated the design and system behavior through MATLAB/Simulink, ensuring effective simulation of the power conversion process and motor control dynamics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Analog Circuit Design</span>
+                            <span class="tech-tag">Power Electronics</span>
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-memory fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design and testing of 4x4 SRAM Memory Array</h3>
+                        <div class="project-org">PSG College of Technology</div>
+                        <p class="text-justify">Designed and implemented a 4x4 SRAM memory array with optimized read/write speed. Developed peripheral circuits (precharge, sense amplifiers) to improve memory access time. Conducted timing verification to ensure read stability and write margin, optimizing for low power. Analysed power and performance metrics, optimizing the design for low-power consumption while maintaining high performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cadence Virtuoso</span>
+                            <span class="tech-tag">Waveviewer</span>
+                            <span class="tech-tag">Memory Design</span>
+                            <span class="tech-tag">Logic Design</span>
+                            <span class="tech-tag">Digital IC Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-solar-panel fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automated Solar Tracking System with PIC Microcontroller</h3>
+                        <div class="project-org">PSG College of Technology</div>
+                        <p class="text-justify">Designed an automated solar tracking system to maximize energy efficiency by adjusting panel orientation based on sun’s position. Utilized PIC16F876 microcontroller for control, processing data from LDR sensors for precise sun alignment. Implemented ULN2003A motor driver and stepper motor for accurate panel movement, optimizing solar panel performance. Programmed in Keil IDE and simulated in Proteus for system validation before physical implementation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Microcontrollers</span>
+                            <span class="tech-tag">Embedded C</span>
+                            <span class="tech-tag">Proteus</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Control Engineer</h3>
+                        <div class="date">July 2025 - December 2025 (6 months)</div>
+                        <p><strong>Danfoss Drives</strong> - Loves Park, Illinois, United States</p>
+                        <ul>
+                            <li>Developed Robot Framework test cases for Low Harmonic Drives, integrated into a CI nightly pipeline using Git and Azure DevOps to automate quality validation.</li>
+                            <li>Automated Hardware-in-the-Loop (HIL) testing with Typhoon HIL, transitioning manual verification to a CI framework for robust, zero-defect product releases.</li>
+                            <li>Optimized CI pipeline execution, achieving a 33% reduction in test runtime (from 3 to 2 hours) and accelerating development feedback cycles.</li>
+                            <li>Engineered and delivered automated test cases via Git, enabling continuous monitoring to protect product integrity and ensure high-quality performance.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Graduate Teaching Associate</h3>
+                        <div class="date">August 2024 - May 2025 (10 months)</div>
+                        <p><strong>Arizona State University</strong> - Tempe, Arizona, United States</p>
+                        <ul>
+                            <li>Worked as a Teaching Assistant for EEE334 Circuits II with Dr. Marnie Wong (Spring 2025)</li>
+                            <li>Worked as a Teaching Assistant for EEE335 Analog and Digital Circuits with Dr. Bahman Moraffah (Fall 2024)</li>
+                            <li>Guided students with their learning and helped them with projects for developing practical skills in the coursework.</li>
+                            <li>Monitored and engaged in online discussion boards and meetings to address student questions and challenges.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Graduate Service Assistant</h3>
+                        <div class="date">January 2024 - May 2025 (1 year 5 months)</div>
+                        <p><strong>Arizona State University</strong> - Tempe, Arizona, United States</p>
+                        <ul>
+                            <li>Worked as a Grader for EGR330 and EGR338 (Spring 2025)</li>
+                            <li>Assisted Dr. Marnie Wong in redesigning the EEE334 Circuits II Lab (Fall 2024)</li>
+                            <li>Worked as a Homework Grader for EEE202 Circuits I (Fall 2024)</li>
+                            <li>Worked as a Lab Grader for EEE202 Circuits I and EEE334 Circuits II (Spring 2024)</li>
+                            <li>Graded assignments and assisted students in correcting mistakes and clearing doubts.</li>
+                            <li>Monitored and engaged in online discussion boards to address student questions and challenges.</li>
+                            <li>Utilized Canvas and Circuit Tutor for assignment submission tracking and grade management.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Process Automation Engineer</h3>
+                        <div class="date">June 2022 - July 2023 (1 year 2 months)</div>
+                        <p><strong>Dow</strong> - Chennai, Tamil Nadu, India</p>
+                        <p><em>Deputed by Randstad India</em></p>
+                        <ul>
+                            <li>Part of Process Automation team in Light Hydrocarbon business focusing importantly on Industrial Automation.</li>
+                            <li>Worked on DCS (Distributed Control System) - ABB 800xA which helps to automate critical plant processes.</li>
+                            <li>Worked on MOD migration project of Dow Terneuzen LHC-2 Plant.</li>
+                            <li>Experienced in Dow work process which includes migration tools, coding development, graphics, simulation and testing in ABB 800xA.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Test Engineer (New Product Introduction)</h3>
+                        <div class="date">March 2022 - May 2022 (3 months)</div>
+                        <p><strong>Delta Electronics</strong> - Tamil Nadu, India</p>
+                        <ul>
+                            <li>Involved in testing new power electronics and automation-based products designed by the R&D.</li>
+                            <li>Involved in debugging and repairing PCBA by soldering Surface-Mount Technology (SMT) and through-hole components.</li>
+                            <li>Conducted bench test, ATE, in-circuit test, functional test, and IC programming test for PCBA Design Board.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-container">
+                <div class="education-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Master of Science - MSE, Electrical Engineering</h3>
+                    <p class="date">August 2023 - May 2025</p>
+                    <p><strong>Arizona State University</strong></p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Bachelor of Engineering - BE, Electrical and Electronics Engineering</h3>
+                    <p class="date">August 2017 - May 2022</p>
+                    <p><strong>PSG College of Technology</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Publications</h2>
+            </div>
+            <div class="publication-card">
+                <h3>Design and Implementation of Power Converters for Electric Vehicle Applications</h3>
+                <p class="text-justify">Published in International Research Journal of Engineering and Technology (IRJET), Volume 8, Issue 8, August 2021. This research paper presents a comprehensive analysis and design methodology for efficient power converters specifically developed for electric vehicle systems.</p>
+                
+                <p class="text-justify">The study focuses on addressing critical challenges in EV power conversion including thermal management, efficiency optimization, and system integration. The proposed converter design demonstrates significant improvements in power density and conversion efficiency while maintaining robust performance under varying load conditions.</p>
+                
+                <div class="publication-links">
+                    <a href="https://irjet.net/archives/V8/i8/IRJET-V8I8357.pdf" target="_blank" class="btn">
+                        <i class="fas fa-file-pdf"></i> View Full Paper (PDF)
+                    </a>
+                    <a href="https://irjet.net/archives/V8/i8" target="_blank" class="btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Journal Issue
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>Email</p>
+                            <p>afshur.us@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Location</p>
+                            <p>Loves Park, Illinois, United States</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <p>LinkedIn</p>
+                            <p>https://www.linkedin.com/in/afshur-thoufeeq-musharraf-kaja-mohideen-060b61194</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/afshur-thoufeeq-musharraf-kaja-mohideen-060b61194" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:afshur.us@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking a link
+                if (window.innerWidth <= 768) {
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Add show class for mobile menu CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                nav ul {
+                    display: none;
+                }
+                nav ul.show {
+                    display: flex;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
